@@ -6,6 +6,7 @@ list.style.listStyle = "none";
 list.style.backgroundColor = "red";
 list.style.height = "50px";
 list.style.paddingLeft = "0";
+list.style.marginBottom = "0";
 let item1 = document.createElement("li");
 let item2 = document.createElement("li");
 let item3 = document.createElement("li");
@@ -29,10 +30,10 @@ main.style.padding = "16px";
 let registrationForm = document.createElement("form");
 registrationForm.classList.add("main-display");
 registrationForm.style.height = "200px";
-let loginForm = document.createElement("form");
-loginForm.classList.add("main-display");
-main.appendChild(registrationForm);
-main.appendChild(loginForm);
+// let loginForm = document.createElement("form");
+// loginForm.classList.add("main-display");
+main.prepend(registrationForm);
+// main.appendChild(loginForm);
 
 let labelsAndInputs = [
   {
@@ -72,7 +73,7 @@ let labelsAndInputs = [
 labelsAndInputs.forEach((label) => {
   let label2 = document.createElement("label");
   label2.setAttribute("for", label.for);
-  label2.style.fontSize = "24px";
+  label2.style.fontSize = "1.5rem";
   label2.textContent = label.text;
   label2.style.fontFamily = "Calibri";
   let input2 = document.createElement("input");
@@ -81,8 +82,8 @@ labelsAndInputs.forEach((label) => {
   input2.style.border = "none";
   input2.style.borderRadius = "4px";
   input2.style.backgroundColor = "#f1f1f1";
-  input2.style.fontSize = "24px";
-  input2.style.marginBottom = "15px";
+  input2.style.fontSize = "1.5rem";
+  input2.style.marginBottom = "5px";
   input2.setAttribute("type", label.type);
   input2.setAttribute("placeholder", label.placeholder);
   input2.setAttribute("name", label.name);
@@ -96,43 +97,48 @@ let button = document.createElement("button");
 button.setAttribute("type", "submit");
 button.setAttribute("class", "registerbtn");
 button.textContent = "Sign up";
+button.style.padding = "10px";
+button.style.border = "none";
+button.style.borderRadius = "4px";
+button.style.fontSize = "24px";
+button.style.marginTop = "10px";
 registrationForm.appendChild(button);
 
-let labelsAndInputs2 = [
-  {
-    text: "Username",
-    for: "username",
-    type: "text",
-    placeholder: "Username",
-    name: "username",
-    id: "username",
-  },
-  {
-    text: "Password",
-    for: "psw2",
-    type: "password",
-    placeholder: "Password",
-    name: "password2",
-    id: "psw2",
-  },
-];
+// let labelsAndInputs2 = [
+//   {
+//     text: "Username",
+//     for: "username",
+//     type: "text",
+//     placeholder: "Username",
+//     name: "username",
+//     id: "username",
+//   },
+//   {
+//     text: "Password",
+//     for: "psw2",
+//     type: "password",
+//     placeholder: "Password",
+//     name: "password2",
+//     id: "psw2",
+//   },
+// ];
 
-labelsAndInputs2.forEach((label) => {
-  let label2 = document.createElement("label");
-  label2.setAttribute("for", label.for);
-  label2.textContent = label.text;
-  let input2 = document.createElement("input");
-  input2.setAttribute("type", label.type);
-  input2.setAttribute("placeholder", label.placeholder);
-  input2.setAttribute("name", label.name);
-  input2.setAttribute("id", label.id);
+// labelsAndInputs2.forEach((label) => {
+//   let label2 = document.createElement("label");
+//   label2.setAttribute("for", label.for);
+//   label2.textContent = label.text;
+//   let input2 = document.createElement("input");
+//   input2.setAttribute("type", label.type);
+//   input2.setAttribute("placeholder", label.placeholder);
+//   input2.setAttribute("name", label.name);
+//   input2.setAttribute("id", label.id);
 
-  loginForm.appendChild(label2);
-  loginForm.appendChild(input2);
-});
+//   loginForm.appendChild(label2);
+//   loginForm.appendChild(input2);
+// });
 
-let button2 = document.createElement("button");
-button2.setAttribute("type", "submit");
-button2.setAttribute("class", "LogInBtn");
-button2.textContent = "Log in";
-loginForm.appendChild(button2);
+// let button2 = document.createElement("button");
+// button2.setAttribute("type", "submit");
+// button2.setAttribute("class", "LogInBtn");
+// button2.textContent = "Log in";
+// loginForm.appendChild(button2);
