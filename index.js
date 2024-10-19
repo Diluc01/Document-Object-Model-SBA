@@ -30,10 +30,7 @@ main.style.padding = "16px";
 let registrationForm = document.createElement("form");
 registrationForm.classList.add("main-display");
 registrationForm.style.height = "200px";
-// let loginForm = document.createElement("form");
-// loginForm.classList.add("main-display");
 main.prepend(registrationForm);
-// main.appendChild(loginForm);
 
 let labelsAndInputs = [
   {
@@ -103,42 +100,3 @@ button.style.borderRadius = "4px";
 button.style.fontSize = "24px";
 button.style.marginTop = "10px";
 registrationForm.appendChild(button);
-
-// let labelsAndInputs2 = [
-//   {
-//     text: "Username",
-//     for: "username",
-//     type: "text",
-//     placeholder: "Username",
-//     name: "username",
-//     id: "username",
-//   },
-//   {
-//     text: "Password",
-//     for: "psw2",
-//     type: "password",
-//     placeholder: "Password",
-//     name: "password2",
-//     id: "psw2",
-//   },
-// ];
-
-// labelsAndInputs2.forEach((label) => {
-//   let label2 = document.createElement("label");
-//   label2.setAttribute("for", label.for);
-//   label2.textContent = label.text;
-//   let input2 = document.createElement("input");
-//   input2.setAttribute("type", label.type);
-//   input2.setAttribute("placeholder", label.placeholder);
-//   input2.setAttribute("name", label.name);
-//   input2.setAttribute("id", label.id);
-
-//   loginForm.appendChild(label2);
-//   loginForm.appendChild(input2);
-// });
-
-// let button2 = document.createElement("button");
-// button2.setAttribute("type", "submit");
-// button2.setAttribute("class", "LogInBtn");
-// button2.textContent = "Log in";
-// loginForm.appendChild(button2);
