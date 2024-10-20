@@ -11,16 +11,52 @@ let item1 = document.createElement("li");
 let item2 = document.createElement("li");
 let item3 = document.createElement("li");
 let item4 = document.createElement("li");
-item1.textContent = "Home";
-item2.textContent = "About";
-item3.textContent = "Contact";
-item4.textContent = "Other";
+
+let item1link = document.createElement("a");
+let item2link = document.createElement("a");
+let item3link = document.createElement("a");
+let item4link = document.createElement("a");
+
+item1link.addEventListener("click", function () {
+  item1link.textContent = "Homepage";
+  item1link.style.color = "green";
+  item1link.href = "#home";
+});
+
+item1link.textContent = "Home";
+item2link.textContent = "About";
+item3link.textContent = "Contact";
+item4link.textContent = "Other";
+
+item1link.href = "#";
+item2link.href = "#";
+item3link.href = "#";
+item4link.href = "#";
+
 nav.appendChild(container);
+
 container.appendChild(list);
+
 list.appendChild(item1);
 list.appendChild(item2);
 list.appendChild(item3);
 list.appendChild(item4);
+
+item1.appendChild(item1link);
+item2.appendChild(item2link);
+item3.appendChild(item3link);
+item4.appendChild(item4link);
+
+let li = document.querySelector("nav ul li").firstChild;
+li.style.textDecoration = "none";
+
+const ul = document.querySelector("#fragment");
+
+let clonedItem = li.cloneNode(true);
+
+const fragment = new DocumentFragment();
+fragment.appendChild(clonedItem);
+ul.append(fragment);
 
 let main = document.querySelector(".main");
 main.classList.add("form-display");
@@ -31,6 +67,15 @@ let registrationForm = document.createElement("form");
 registrationForm.classList.add("main-display");
 registrationForm.style.height = "200px";
 main.prepend(registrationForm);
+
+let submit = document.getElementById("submit");
+let log = document.getElementById("log");
+submit.addEventListener("submit", logSubmit);
+
+function logSubmit(event) {
+  event.preventDefault();
+  log.textContent = `Form submitted! Timestamp: ${event.timeStamp}`;
+}
 
 let labelsAndInputs = [
   {
