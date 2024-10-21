@@ -27,10 +27,6 @@ input {
   padding: 10px;
 }
 
-.container {
-  /* background-color: #5b616a; */
-}
-
 .container2 {
   display: flex;
   width: 100%;
@@ -62,7 +58,7 @@ input {
 
 #text {
   width: 50%;
-  /* background-color: #f4f2f3; */
+  background-color: #f4f2f3;
 }
 
 #img {

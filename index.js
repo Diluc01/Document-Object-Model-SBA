@@ -157,3 +157,18 @@ function myFunction() {
     window.alert("Hello " + person + " How are you today?");
   }
 }
+
+const name2 = document.getElementById("exampleInputEmail1");
+const password2 = document.getElementById("exampleInputPassword1");
+const errorElement = document.getElementById("error");
+
+submit.addEventListener("submit", (event) => {
+  let messages = [];
+  if (name2.value === "" || name2.value == null) {
+    messages.push("Name is required");
+  }
+  if (messages.length > 0) {
+    event.preventDefault();
+    errorElement.innerText = messages.join(", ");
+  }
+});
