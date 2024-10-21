@@ -57,7 +57,6 @@ input {
 .mini-container {
   display: flex;
   flex-direction: column;
-  /* border: solid blue 1px; */
   align-items: center;
   justify-content: center;
 }

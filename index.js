@@ -145,3 +145,10 @@ button.style.borderRadius = "4px";
 button.style.fontSize = "24px";
 button.style.marginTop = "10px";
 registrationForm.appendChild(button);
+
+function myFunction() {
+  let person = prompt("Please enter your name", "Berlin Tejeda");
+  if (person != null) {
+    window.alert("Hello " + person + " How are you today?");
+  }
+}
