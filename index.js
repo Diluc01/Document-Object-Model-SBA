@@ -3,7 +3,7 @@ let container = document.createElement("div");
 let list = document.createElement("ul");
 list.classList.add("display-flex");
 list.style.listStyle = "none";
-list.style.backgroundColor = "red";
+list.style.backgroundColor = "#DA2C38";
 list.style.height = "50px";
 list.style.paddingLeft = "0";
 list.style.marginBottom = "0";
@@ -16,6 +16,11 @@ let item1link = document.createElement("a");
 let item2link = document.createElement("a");
 let item3link = document.createElement("a");
 let item4link = document.createElement("a");
+
+item1link.style.color = "black";
+item2link.style.color = "black";
+item3link.style.color = "black";
+item4link.style.color = "black";
 
 item1link.addEventListener("click", function () {
   item1link.textContent = "Homepage";
@@ -60,7 +65,7 @@ ul.append(fragment);
 
 let main = document.querySelector(".main");
 main.classList.add("form-display");
-main.style.backgroundColor = "green";
+main.style.backgroundColor = "#230903";
 main.style.height = "100vh";
 main.style.padding = "16px";
 let registrationForm = document.createElement("form");
